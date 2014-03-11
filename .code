@@ -1,0 +1,36 @@
+int msensor= 2;
+int redLED = 13;
+int yellowLED = 12;
+int greenLED = 10;
+int blueLED = 8;
+void setup(){
+  pinMode (msensor,INPUT);
+  pinMode (redLED, OUTPUT);
+  pinMode (yellowLED, OUTPUT);
+  pinMode (greenLED, OUTPUT);
+  pinMode (blueLED, OUTPUT);
+}
+
+void loop (){
+  digitalWrite (redLED,LOW);
+  int sensor = digitalRead(msensor);
+  if (sensor == LOW){
+    digitalWrite(redLED,HIGH);
+    delay(1000);
+    digitalWrite(redLED,LOW);
+    delay(1000);
+  else if (msensor == LOW){
+    digitalWrite(yellowLED,HIGH);
+    delay(1000);
+    digitalWrite(yellowLED,LOW);
+    delay(1000);
+    digitalWrite(greenLED,HIGH);
+    delay(1000);
+    digitalWrite(greenLED,LOW);
+    delay(1000);
+    digitalWrite(blueLED,HIGH);
+    delay(1000);
+    digitalWrite(blueLED,LOW);
+    delay(1000);
+  }
+  }
